@@ -7,6 +7,8 @@ age = 21
 is_student = True
 gpa = 3.2
 
+name = float(name)
+
 age = float(age)
 
-print(type(age))
+print(type(name))
