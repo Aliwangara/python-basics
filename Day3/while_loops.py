@@ -35,3 +35,8 @@ while number <10  or number >20:
     print(f"{number} Invalid number")
     number = float(input("Enter a number between 1 and 20: "))
 print(f"Your number is {number}")
+
+if number >10 or number <20:
+    print(f"Your number is {number}")
+else:
+  num = float(input("enter your number"))
