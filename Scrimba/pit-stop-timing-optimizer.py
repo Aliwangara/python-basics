@@ -26,7 +26,7 @@ time_spent_in_pits = (total_pit_stop_time/race_time) *100
 round(time_spent_in_pits, 2)
 
 print(total_pit_stop_time)
-print(f"Total time spent in pits is: {time_spent_in_pits} %")
+print(f"Total time spent in pits is: {time_spent_in_pits:>10}%")
 
 if time_spent_in_pits > 5:
     print("You need a new pit crew. 🛠️")
