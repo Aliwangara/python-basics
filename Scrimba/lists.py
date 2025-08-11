@@ -42,8 +42,10 @@ day = int(input("Enter a day: "))
 sales_w2.append(day)
 
 sales = []
-sales.extend(sales_w1)
-sales.extend(sales_w2)
+# sales.extend(sales_w1)
+# sales.extend(sales_w2)
+# or instead of using .extend() we can use + signs to add two lists together
+sales = sales_w1 + sales_w2
 best_day = max(sales) *1.5
 worst_day = min(sales) *1.5
 total = worst_day + best_day
