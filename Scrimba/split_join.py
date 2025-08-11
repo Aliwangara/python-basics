@@ -46,4 +46,10 @@ friends = csv2
 
 print(friends)
 
+palindrome = input("Enter Palindrome: ").lower()
+
+palindrome =' '.join(palindrome)[::-1]
+answer = palindrome.replace(' ', '')
+print(answer)
+
 
