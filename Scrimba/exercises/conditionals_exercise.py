@@ -1,11 +1,8 @@
-from calendar import month
-
 
 def num_days(month):
   thirty_one_days = ('jan','mar','may','jul','aug','oct','dec')
   thirty_days = ('apr', 'jun','sep','nov')
   twenty_eight = ('feb',)
-  month = input("Enter a month: ")[0:3].lower()
 
   if month in thirty_one_days:
       print(f"{month[0:]} Has 31 Days")
@@ -47,6 +44,6 @@ def num_days(month):
     # elif month == 'dec':
     #     print('number of days in',month,'is',31)
 
-num_days(month)
+num_days('jan')
 # optimize/shorten the code in the function
 # try to reduce the number of conditionals
