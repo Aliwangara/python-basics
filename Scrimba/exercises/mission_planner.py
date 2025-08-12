@@ -25,21 +25,48 @@
 # Mission data
 mission_1_speed = 40000  # Pathfinder
 mission_2_speed = 75000  # Perseverance
-mission_3_speed = 120000 # Starship
+mission_3_speed = 120000  # Starship
 
 mars_distance = 225_000_000  # in kilometers
-fuel_rate = 0.3              # liters per kilometer
-fuel_price = 1.8             # dollars per liter
+fuel_rate = 0.3  # liters per kilometer
+fuel_price = 1.8  # dollars per liter
+
+
+def travel_time(distance, speed):
+    return round(distance / speed)
+
+
+def mission_cost(distance, fuel_rate, fuel_price):
+    total_fuel = distance * fuel_rate
+    cost = total_fuel * fuel_price
+    return cost
+
+
+# Pathfinder
+time_1 = travel_time(mars_distance, mission_1_speed)
+
+
+# Perseverance
+time_2 = travel_time(mars_distance, mission_2_speed)
+
+
+# Starship
+time_3 = travel_time(mars_distance, mission_3_speed)
+
+
+
+
+total_cost_fuel =  mission_cost(mars_distance, fuel_rate, fuel_price)
 
 print("===== Mars Mission Planner =====\n")
+print("Mission: Pathfinder")
+print("Travel time:", time_1, "hours")
+print(f"Fuel cost: ${total_cost_fuel:.2f}")
 
-def mission_planner(speed):
-    time =  (mars_distance / speed)
-    print(time)
-mission_planner(mission_1_speed)
+print("\nMission: Perseverance")
+print("Travel time:", time_2, "hours")
+print(f"Fuel cost: ${total_cost_fuel:.2f}")
 
-def total_fuel_cost():
-    total_cost = mars_distance * fuel_rate * fuel_price
-    return total_cost
-print(total_fuel_cost())
-
+print("\nMission: Starship")
+print("Travel time:", time_3, "hours")
+print(f"Fuel cost: ${total_cost_fuel:.2f}")
