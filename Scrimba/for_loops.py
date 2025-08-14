@@ -54,24 +54,32 @@ names1 = ['graHam chapman', 'TERRY', 'terry jones']
 combined_names = ','.join(names + names1).lower().title().split(',')
 
 
-while True:
+# while True:
+#
+#     name_input = input("Enter a name write(d) when done: ").title()
+#
+#
+#     if name_input == "D":
+#         print(combined_names)
+#         break
+#     else:
+#         combined_names.append(name_input)
+#         print(combined_names)
+# for name in combined_names:
+#     for index in range(len(combined_names)):
+#         if name == combined_names[index]:
+#             print(f"{name}! You are Invited to the party on Saturday.")
 
+
+#  or rather we can use:
+
+for index in range(2):
     name_input = input("Enter a name write(d) when done: ").title()
 
+    combined_names.append(name_input)
 
-    if name_input == "D":
-        print(combined_names)
-        break
-    else:
-        combined_names.append(name_input)
-        print(combined_names)
 for name in combined_names:
-    for index in range(len(combined_names)):
-        if name == combined_names[index]:
-            print(f"{name}! You are Invited to the party on Saturday.")
-
-
-
+    print(f"{name}! You are Invited to the party on Saturday.")
 
 
 
