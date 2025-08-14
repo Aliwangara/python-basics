@@ -19,6 +19,7 @@
 #       • Total points earned
 #       • Final tier
 
+
 # Purchase history (e.g., 3.75, 7.20, etc.)
 purchases = [3.75, 7.20, 15.50, 100.00, 42.30]
 
@@ -27,21 +28,23 @@ def earn_points(price):
 
 def tier_label(points):
     if points < 100:
-        print('Bronze')
+        return 'Bronze'
     elif 100<= points < 500:
-        print('Silver')
+        return 'Silver'
     else:
-        print('Gold')
+        return 'Gold'
 
-    for purchase in purchases:
+total_points = 0
+total_price = 0
+for purchase in purchases:
+    total_price += purchase
+    total_points+= earn_points(purchase)
+final_tier = tier_label(total_points)
 
-     total_point = 0
-     total_point+= earn_points(purchase)
-
-     total_tier = tier_label(total_point)
-     total_cost = sum(purchases)
-
-     break
+print("------ Loyalty Summary ------")
+print(f"Total dollars spent: ${total_price:.2f}")
+print(f"Total points earned: {total_points}")
+print(f"Final tier: {final_tier}")
 
 
 
