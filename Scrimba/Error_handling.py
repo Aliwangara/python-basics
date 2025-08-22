@@ -26,4 +26,4 @@ else:
     print("30 divided by", num, "is: ", 30 / num)
 finally:
 
-print("** THANK YOU FOR PLAYING **")
+ print("** THANK YOU FOR PLAYING **")
