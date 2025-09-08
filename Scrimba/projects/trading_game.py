@@ -1,10 +1,8 @@
 import random as r
-
-from Scrimba.exercises.dictionaries_exercise import purse
-
 bag = ('green','green','green','green','green','green','red','red','red','red')
 
 start_purse = 1000
+purse = start_purse
 
 result = 0
 
